@@ -1,135 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donor || Donate blood</title>
-   
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <style>
-        body{
-            background: url("6-63010_transparent-red-texture-png-red-vector-background-png.png") center center fixed ;
-            background-repeat: no-repeat;
-            background-size: 100%
-            
-          }
-        .wrap {
-            position: absolute;
-            top: 25%;
-            
-            width: 100%;
-            padding: 0 20px;
-        }
-        .form{
-            max-width: 550px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0,0,10px rgba(0, 0, 0, 0.13);
-        
-        }
-        .donate-blood,.donate-age ,.donate-unit,.donate-disease{
-            margin-bottom: 3%;
-            font-family: sans-serif;
-            color: white;
-            font-size: 1rem;
-            position: relative;
-            left: 20px;
-    
-        
-         
-        
-        }
-        .select{
-            width: 200px;
-            height: 30px;
-            margin-left: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position:relative;
-            left: 100px;
-            bottom: 20px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .h-h{
-            text-align: center;
-            font-size: 3rem;
-            margin-top: 70px;
-            position: relative;
-            left: 50px;
-        }
-        .btn{
-            text-align: center;
-            padding: 12px;
-            position: relative;
-            width:90px;
-            font-size: 15px;
-            font-weight: 400px;
-            color:blanchedalmond;
-            background: rgba(196, 11, 11, 0.959);
-            border-radius: 20px;
-            align-items: center;
-            left: 250px;
-            
-        
+      body {
+        background: url("6-63010_transparent-red-texture-png-red-vector-background-png.png")
+          right fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .wrap {
+        position: absolute;
+        top: 25%;
 
-        
+        width: 100%;
+        padding: 0 20px;
+        margin-left: 100px;
+      }
+      .form {
+        max-width: 550px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.13);
+      }
+      .donate-blood,
+      .donate-age,
+      .donate-unit,
+      .donate-disease {
+        margin-bottom: 3%;
+        font-family: sans-serif;
+        color: white;
+        font-size: 1rem;
+        position: relative;
+        left: 20px;
+      }
+      .select {
+        width: 200px;
+        height: 30px;
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 100px;
+        bottom: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .h-h {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 70px;
+        position: relative;
+        left: 88px;
+      }
+      .btn {
+        text-align: center;
+        padding: 12px;
+        position: relative;
+        width: 90px;
+        font-size: 15px;
+        font-weight: 400px;
+        color: blanchedalmond;
+        background: rgba(196, 11, 11, 0.959);
+        border-radius: 20px;
+        align-items: center;
+        left: 250px;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background: #11101d;
+        padding: 6px 14px;
+        transition: all 0.5s ease;
+      }
 
-        }
-      
-    
-            
-    
+      /* .sidebar .active {
+        width: 240px;
+      } */
+
+      .sidebar .logo_content .logo {
+        color: #fff;
+        position: relative;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* .sidebar .active .logo_content .logo {
+        opacity: 1;
+        pointer-events: none;
+      } */
+
+      .logo_content .logo i {
+        font-size: 28px;
+        margin-right: 5px;
+      }
+
+      .logo_content .logo .logo_name {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .sidebar #btn {
+        position: absolute;
+        color: #fff;
+        left: 90%;
+        top: 6px;
+        left: 50%;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .sidebar .active #btn {
+        left: 90%;
+      }
+
+      .sidebar ul {
+        margin-top: 20px;
+      }
+
+      .sidebar ul li {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin: 0 5px;
+        list-style: none;
+        line-height: 50px;
+        transition: all 0.5s ease;
+      }
+
+      .sidebar:active ul li:hover {
+        background: #fff;
+        color: #1d1b31;
+      }
+
+      .sidebar ul li .tooltip {
+        position: absolute;
+        left: 122px;
+        top: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 6px;
+        height: 35px;
+        width: 122px;
+        background: #fff;
+        line-height: 35px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transition: 0s;
+        opacity: 0;
+        pointer-events: none;
+      }
+      /* .sidebar.active ul li .tooltip {
+        display: none;
+      } */
+
+      /* .sidebar .links_name {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+      } */
+
+      /* .sidebar.active .links_name {
+        opacity: 1;
+        pointer-events: auto;
+      } */
+
+      /* .sidebar ul li:hover .tooltip {
+        transition: all 0.5s ease;
+        opacity: 1;
+        top: 50%;
+      } */
+
+      .sidebar ul li input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        background: #1d1b31;
+        padding-left: 50px;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      .sidebar ul li a {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        border-radius: 12px;
+        white-space: nowrap;
+      }
+
+      .sidebar ul li a:hover {
+        color: #11101d;
+        background: #fff;
+      }
+      .sidebar ul li i {
+        height: 50px;
+        min-width: 50px;
+        border-radius: 12px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .home_content {
+        position: absolute;
+        height: 100%;
+        width: calc(100% - 78px);
+        left: 78px;
+        transition: all 0.5s ease;
+      }
+
+      .home_content .text {
+        font-size: 25px;
+        font-weight: 500;
+        color: #1d1b31;
+        margin: 12px;
+      }
+
+      /* .sidebar.active ~ .home_content {
+        width: calc(100% - 240px);
+        left: 240px;
+      } */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      }
+      body {
+        position: fixed;
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      h3 {
+        background: rgb(97, 96, 89)97, 96, 89)97, 96, 89);
+        text-align: center;
+        font-family: sans-serif;
+        color: black;
+      }
+      .head {
+        width: 80%;
+        margin-left: 18%;
+        margin-top: 50px;
+        padding: 0;
+        font-family: sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h2 class="h-h">DONATE BLOOD</h2> 
-    <div class="wrap">
-       
-        <div class="form">
-            <div class="donate-blood">
-                <label>BLOOD GROUP</label>
-                <select class="select" name="blood_group">
-                    <option value="">Select Blood Group</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="Not Known">Not Known</option>
-                </select>
+  <body>
+    <div class="sidebar">
+      <div class="logo_cotent">
+        <div class="logo"></div>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
 
-            </div>
-            <div class="donate-age">
-                <label>AGE</label>
-                <input type="number" class="select" placeholder="enter your age">
-            </div>
-            <div class="donate-unit">
-                <label>UNIT</label>
-                <input type="number" class="select" placeholder="enter in ml">
-            </div>
-            <div class="donate-disease">
-                <label>DISEASE</label>
-                <input type="text" class="select" placeholder="if any">
-            </div>
-            <div>
-               <button  class="btn"> DONATE</button>
-            </div>
-           
-                
+        <li>
+          <a href="#">
+            <i class="bx bx-donate-blood"></i>
+            <span class="links_name">Donate Blood</span>
+          </a>
+          <span class="tooltip">Donate Blood</span>
+        </li>
 
-        </div>
-        
+        <li>
+          <a href="#">
+            <i class="bx bx-history"></i>
+            <span class="links_name">Donation History</span>
+          </a>
+          <span class="tooltip">Donation History</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-refresh"></i>
+            <span class="links_name">Blood Request</span>
+          </a>
+          <span class="tooltip">Blood Request</span>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-history"></i>
+            <span class="links_name">Request History</span>
+          </a>
+          <span class="tooltip">Request History</span>
+        </li>
+
+        <li>
+          <a id="logout" href="#">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name"> Logout</span>
+          </a>
+          <span class="tooltip">logout</span>
+        </li>
+      </ul>
     </div>
-</body>
 
+    <h2 class="h-h">DONATE BLOOD</h2>
+    <div class="wrap">
+      <div class="form">
+        <div class="donate-blood">
+          <label>BLOOD GROUP</label>
+          <select class="select" name="blood_group">
+            <option value="">Select Blood Group</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="Not Known">Not Known</option>
+          </select>
+        </div>
+        <div class="donate-age">
+          <label>AGE</label>
+          <input type="number" class="select" placeholder="enter your age" />
+        </div>
+        <div class="donate-unit">
+          <label>UNIT</label>
+          <input type="number" class="select" placeholder="enter in ml" />
+        </div>
+        <div class="donate-disease">
+          <label>DISEASE</label>
+          <input type="text" class="select" placeholder="if any" />
+        </div>
+        <div>
+          <button class="btn">DONATE</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor || Need blood</title>
+   
+    <style>
+        body{
+            background: url("6-63010_transparent-red-texture-png-red-vector-background-png.png") center center fixed  ;
+            background-repeat: no-repeat;
+            background-size: 100%
+            
+          }
+        .wrap {
+            position: absolute;
+            top: 25%;
+            
+            width: 100%;
+            padding: 0 20px;
+        }
+        .form{
+            max-width: 550px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0,0,10px rgba(0, 0, 0, 0.13);
+        
+        }
+        .donate-blood,.donate-age ,.donate-unit,.donate-disease{
+            margin-bottom: 3%;
+            font-family: sans-serif;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+            left: 20px;
+    
+        
+         
+        
+        }
+        .select{
+            width: 200px;
+            height: 30px;
+            margin-left: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            left: 100px;
+            bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .h-h{
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 70px;
+            position: relative;
+            left: 50px;
+        }
+        .btn{
+            text-align: center;
+            padding: 12px;
+            position: relative;
+            width:90px;
+            font-size: 15px;
+            font-weight: 400px;
+            color:blanchedalmond;
+            background: rgba(196, 11, 11, 0.959);
+            border-radius: 20px;
+            align-items: center;
+            left: 250px;
+            
+        
+
+        
+
+        }
+      
+    
+            
+    
+    </style>
+</head>
+
+<body>
+    <h2 class="h-h">NEED BLOOD? </h2> 
+    <div class="wrap">
+       
+       
+        <div class="form">
+            <div class="donate-age">
+                <label>NAME</label>
+                <input type="text" class="select" placeholder="enter your full name">
+
+            </div>
+
+            <div class="donate-age">
+                <label>AGE</label>
+                <input type="number" class="select" placeholder="enter your age">
+            </div>
+
+            <div class="donate-blood">
+                <label>BLOOD GROUP</label>
+                <select class="select" name="blood_group">
+                    <option value="">Select Blood Group</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="Not Known">Not Known</option>
+                </select>
+
+            </div>
+            
+            <div class="donate-unit">
+                <label>UNIT</label>
+                <input type="number" class="select" placeholder="enter in ml">
+            </div>
+            <div class="donate-disease">
+                <label>REASON</label>
+                <input type="text" class="select" placeholder="for">
+            </div>
+            <div>
+               <button  class="btn"> REQUEST</button>
+            </div>
+           
+                
+
+        </div>
+        
+    </div>
+</body>
+
+</html>

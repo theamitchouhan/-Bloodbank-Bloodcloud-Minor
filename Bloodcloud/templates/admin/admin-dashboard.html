@@ -281,10 +281,11 @@
       .card_content {
         padding: 1rem;
         background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+        width: 150px;
       }
       .card_title {
         color: #ffffff;
-        font-size: 1.1rem;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: capitalize;
@@ -296,6 +297,7 @@
         line-height: 1.5;
         margin-bottom: 1.25rem;
         font-weight: 400;
+        font-size: 3rem;
       }
       .made_by {
         font-weight: 400;
@@ -304,19 +306,31 @@
         text-align: center;
       }
       .card {
-        background-color: #11101d;
+        background-color: wheat;
         border-radius: 5px;
         display: flex;
         padding: 25px;
         margin-right: 50px;
-        width: 260px;
-        height: 190px;
+        width: 250px;
+        height: 100px;
       }
 
       .row-box {
         display: flex;
         margin: 5px;
         width: 80%;
+        margin-top: 50px;
+      }
+      .card-body{
+        font-size: 20px;
+      }
+      .no{
+        font-size: 25px;
+        padding-top: 45px;
+      }
+      .nor{
+        padding-top: 50px;
+        font-size: 25px;
       }
     </style>
   </head>
@@ -402,7 +416,7 @@
                     <h2 class="card_title">A+ <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{A1.unit}}</div>
+                  <div class="unit">7</div>
                 </div>
               </div>
             </li>
@@ -413,7 +427,7 @@
                     <h2 class="card_title">B+ <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{B1.unit}}</div>
+                  <div class="unit">15</div>
                 </div>
               </div>
             </li>
@@ -424,7 +438,7 @@
                     <h2 class="card_title">O+ <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{A1.unit}}</div>
+                  <div class="unit">32</div>
                 </div>
               </div>
             </li>
@@ -435,7 +449,7 @@
                     <h2 class="card_title">AB+ <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{AB1.unit}}</div>
+                  <div class="unit">4</div>
                 </div>
               </div>
             </li>
@@ -446,7 +460,7 @@
                     <h2 class="card_title">A- <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{A2.unit}}</div>
+                  <div class="unit">54</div>
                 </div>
               </div>
             </li>
@@ -457,7 +471,7 @@
                     <h2 class="card_title">B- <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{B2.unit}}</div>
+                  <div class="unit">9</div>
                 </div>
               </div>
             </li>
@@ -468,7 +482,7 @@
                     <h2 class="card_title">O- <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{A2.unit}}</div>
+                  <div class="unit">10</div>
                 </div>
               </div>
             </li>
@@ -479,7 +493,7 @@
                     <h2 class="card_title">AB- <i class="fas fa-tint"></i></h2>
                   </div>
                   <br /><br />
-                  <div class="unit">{{AB2.unit}}</div>
+                  <div class="unit">15</div>
                 </div>
               </div>
             </li>
@@ -488,12 +502,12 @@
               <row class="row-box">
                 <div
                   class="card"
-                  style="margin-left: -231px width: 260px; height: 190px;"
+                  style="margin-left: -231px width: 260px; height: 190px; "
                 >
                   <div class="card-body">
                     <div>
                       Total Blood Unit (in ml) <br />
-                      {{totalbloodunit}}
+                      <p class="no">109</p> 
                     </div>
                   </div>
                 </div>
@@ -504,8 +518,8 @@
                 >
                   <div class="card-body">
                     <div>
-                      Total Blood Unit (in ml) <br />
-                      {{totalbloodunit}}
+                      Total Donors <br />
+                      <p class="nor">34</p>
                     </div>
                   </div>
                 </div>
@@ -516,8 +530,8 @@
                 >
                   <div class="card-body">
                     <div>
-                      Total Blood Unit (in ml) <br />
-                      {{totalbloodunit}}
+                      Total requests <br />
+                      <p class="no">24</p>
                     </div>
                   </div>
                 </div>
@@ -528,8 +542,8 @@
                 >
                   <div class="card-body">
                     <div>
-                      Total Blood Unit (in ml) <br />
-                      {{totalbloodunit}}
+                      Approved Request <br />
+                      <p class="no">14</p>
                     </div>
                   </div>
                 </div>
